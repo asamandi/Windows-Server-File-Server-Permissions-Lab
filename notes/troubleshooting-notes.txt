@@ -1,0 +1,54 @@
+============================================================
+              TROUBLESHOOTING NOTES
+============================================================
+
+Problem:
+PC1 cannot join the amir.local domain.
+
+Most Likely Cause:
+PC1 DNS is not pointing to the domain controller.
+
+Fix:
+Set PC1 preferred DNS server to 192.168.10.10.
+Verify with nslookup amir.local.
+
+------------------------------------------------------------
+
+Problem:
+Domain user cannot access the correct folder.
+
+Most Likely Cause:
+User is not in the correct Active Directory security group.
+Share permission or NTFS permission is missing.
+
+Fix:
+Verify group membership in Active Directory Users and Computers.
+Verify share permissions.
+Verify NTFS permissions.
+Log out and log back in after changing group membership.
+
+------------------------------------------------------------
+
+Problem:
+Wrong user can access another department folder.
+
+Most Likely Cause:
+Everyone, Domain Users, or Authenticated Users still has permission.
+
+Fix:
+Remove broad permissions.
+Only allow the correct department security group.
+
+------------------------------------------------------------
+
+Problem:
+User can open folder but cannot create a file.
+
+Most Likely Cause:
+User has Read permission only.
+
+Fix:
+Set share permission to Change.
+Set NTFS permission to Modify.
+
+============================================================
