@@ -1,0 +1,39 @@
+============================================================
+              VERIFICATION COMMANDS
+============================================================
+
+On PC1:
+
+ipconfig /all
+
+ping DC1
+
+nslookup amir.local
+
+whoami
+
+whoami /groups
+
+dir \\DC1\IT
+
+dir \\DC1\HR
+
+dir \\DC1\Sales
+
+============================================================
+
+Expected Results:
+
+PC1 uses DNS server 192.168.10.10.
+
+PC1 can ping DC1.
+
+PC1 can resolve amir.local.
+
+Domain users can log in successfully.
+
+Department users can access only their assigned folders.
+
+Unauthorized folder access is denied.
+
+============================================================
